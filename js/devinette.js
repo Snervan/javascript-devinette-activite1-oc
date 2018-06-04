@@ -2,9 +2,6 @@
 Activité : jeu de devinette
 */
 
-// NE PAS MODIFIER OU SUPPRIMER LES LIGNES CI-DESSOUS
-// COMPLETEZ LE PROGRAMME UNIQUEMENT APRES LE TODO
-
 console.log("Bienvenue dans ce jeu de devinette !");
 
 // Cette ligne génère aléatoirement un nombre entre 1 et 100
@@ -28,15 +25,20 @@ while(essais <= 6 && nombreSaisiUtilisateur !== solution) {
 	if(nombreSaisiUtilisateur > solution){
 		console.log(nombreSaisiUtilisateur + " est trop grand.");
 		essais++;
-	} else if(nombreSaisiUtilisateur < solution) {
-			console.log(nombreSaisiUtilisateur + " est trop petit.");
-			essais++;
-		} else {
-			console.log("Bravo ! La solution était " + solution);
+	} 
+	else if (nombreSaisiUtilisateur < solution) {
+		console.log(nombreSaisiUtilisateur + " est trop petit.");
+		essais++;
+	} 
+	else {
+		console.log("Bravo ! La solution était " + solution);
 
-			if(essais > 1) console.log("Vous trouvé en "+ essais +" essais.");
-			else console.log("Vous trouvé en un essai.");
+		if(essais > 1) {
+			console.log("Vous trouvé en "+ essais +" essais.");
+		} else {
+			console.log("Vous trouvé en un essai.");
 		}
+	}
 
 	/* Une fois que le joueur a tenté six fois sans succès de deviner le nombre, 
 	cette condition s'éxécute puis on affiche le game over et la solution. */
